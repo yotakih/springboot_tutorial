@@ -1,67 +1,67 @@
-# Springboot プロジェクトサンプル
-## フォルダ構造
-├── pom.xml		このプロジェクトで必要なモジュールを記載しておくとmavenがダウンロードしてきてくれる。
-└── src
-    ├── main																												
-    │   ├── java
-    │   │   └── com
-    │   │       └── example
-    │   │           └── demo
-    │   │               ├── DemoApplication.java
-    │   │               ├── app
-    │   │               │   ├── controller
-    │   │               │   │   ├── PlayerController.java						画面を返すコントローラ
-    │   │               │   │   └── PlayerRestController.java				APIコントローラ
-    │   │               │   └── form
-    │   │               │       ├── PlayerInputRequestForm.java			APIコントローラのPOSTデータ型
-    │   │               │       └── PlayerOutputRequestForm.java		APIコントローラの返却JSONデータ型
-    │   │               └── domain
-    │   │                   ├── repository
-    │   │                   │   └── PlayerRepository.java
-    │   │                   └── service
-    │   │                       ├── PlayerDto.java
-    │   │                       └── PlayerService.java
-    │   └── resources
-    │       ├── application.properties
-    │       ├── com
-    │       │   └── example
-    │       │       └── demo
-    │       │           └── domain
-    │       │               └── repository
-    │       │                   └── PlayerRepository.xml
-    │       ├── static
-    │       └── templates
-    │           └── players.html
-    └── test
-        ├── java
-        │   └── com
-        │       └── example
-        │           └── demo
-        │               ├── DemoApplicationTests.java
-        │               ├── app
-        │               │   ├── controller
-        │               │   │   ├── PlayerControllerTest.java
-        │               │   │   └── PlayerRestControllerTest.java
-        │               │   └── form
-        │               │       └── PlayerInputRequestFormTest.java
-        │               └── domain
-        │                   ├── common
-        │                   │   └── CSVDataSetLoader.java
-        │                   ├── repository
-        │                   │   └── PlayerRepositoryTest.java
-        │                   └── service
-        │                       └── PlayerServiceTest.java
-        └── resource
-            ├── ValidationMessages.properties
-            └── com
-                └── example
-                    └── demo
-                        └── domain
-                            └── repository
-                                ├── datas
-                                │   ├── player.csv
-                                │   └── table-ordering.txt
-                                └── expectdata
-                                    ├── player.csv
-                                    └── table-ordering.txt
-
+#&nbsp;Springboot&nbsp;プロジェクトサンプル&nbsp;&nbsp;  
+##&nbsp;フォルダ構造&nbsp;&nbsp;  
+├──&nbsp;pom.xml		このプロジェクトで必要なモジュールを記載しておくとmavenがダウンロードしてきてくれる。&nbsp;&nbsp;  
+└──&nbsp;src&nbsp;&nbsp;  
+&nbsp;  &nbsp;├──&nbsp;main																												&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;├──&nbsp;java&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;└──&nbsp;com&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;example&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;demo&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;DemoApplication.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;app&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;├──&nbsp;controller&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;│  &nbsp;├──&nbsp;PlayerController.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;画面を返すコントローラ&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;│  &nbsp;└──&nbsp;PlayerRestController.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APIコントローラ&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;form&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;PlayerInputRequestForm.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APIコントローラのPOSTデータ型&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;PlayerOutputRequestForm.java	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APIコントローラの返却JSONデータ型&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;domain&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;repository&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;PlayerRepository.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB操作のインターフェースを記載。実際のSQLはXMLに記載する&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;service&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;PlayerDto.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PlayerServiceに値を渡すための構造体&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;PlayerService.java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;業務ロジックやRepositoryを介してDB操作をおこなう&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;└──&nbsp;resources&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;application.properties&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;com&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;example&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;demo&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;domain&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;repository&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;PlayerRepository.xml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB操作のSQLを記載する&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;static&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;templates&nbsp;&nbsp;  
+&nbsp;  &nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;players.html&nbsp;&nbsp;  
+&nbsp;  &nbsp;└──&nbsp;test&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;com&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;example&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;demo&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;DemoApplicationTests.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;app&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;├──&nbsp;controller&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;│  &nbsp;├──&nbsp;PlayerControllerTest.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;│  &nbsp;└──&nbsp;PlayerRestControllerTest.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;form&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;PlayerInputRequestFormTest.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;domain&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;common&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;CSVDataSetLoader.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;repository&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;PlayerRepositoryTest.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;service&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;PlayerServiceTest.java&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;resource&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;ValidationMessages.properties&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;com&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;example&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;demo&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;domain&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;repository&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;datas&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;├──&nbsp;player.csv&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│  &nbsp;└──&nbsp;table-ordering.txt&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;expectdata&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;player.csv&nbsp;&nbsp;  
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└──&nbsp;table-ordering.txt&nbsp;&nbsp;  
+&nbsp;&nbsp;  
