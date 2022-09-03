@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Hello Thymeleaf</title>
+</head>
+
+<body>
+	<ul>
+		<li th:each="player : ${list}">
+			[[${player.id}]]
+		</li>
+	</ul>
+</body>
+
+</html>
